@@ -41,20 +41,29 @@ collections:
 
   - name: pages
     label: Pages
-    files:
-      - file: "data/pages/home.yml"
-        label: Homepage
-        name: home
-        fields:
-          - label: Hero
-            name: hero
-            widget: object
-            fields:
+    format: yml
+    extension: yml
+    folder: data/pages/
+    create: true
+    slug: '{{title}}'
+    fields:
+      fields:
               - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}
-          - label: Story
-            name: story
-            widget: markdown
+#     files:
+#       - file: "data/pages/home.yml"
+#         label: Homepage
+#         name: home
+#         fields:
+#           - label: Hero
+#             name: hero
+#             widget: object
+#             fields:
+#               - {label: Title, name: title, widget: string}
+#               - {label: Image, name: image, widget: image}
+#           - label: Story
+#             name: story
+#             widget: markdown
 
   - name: settings
     label: Settings
